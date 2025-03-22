@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            display: grid;
+            grid-template-columns:  (gutter) 1fr repeat(16, (col) 1fr (gutter) 1fr );
+            grid-template-rows: repeat(3, (row) auto (gutter) 20px );
+            /* https://codepen.io/rachelandrew/pen/ExvBzQ */
+
+            grid-template-areas:
+            'header header header header header header header header header header header header header header header header'
+            'main main main main main main main main main main main main sidebar sidebar sidebar sidebar'
+            'footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer';
+            background-color: #fff;
+
+            grid-template-rows:  (gutter) 1fr repeat(16, (row) 1fr (gutter) 1fr );
+        }
+
+        header {
+            grid-area: header;
+            background-color: #d07de9;
+            margin: 0.5rem;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background-color: #167723;
+            margin: 0.5rem;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #dd8686;
+            margin: 0.5rem;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #34c9ee;
+            margin: 0.5rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>header</header>
+    <main>main</main>
+    <aside>sidebar</aside>
+    <footer>footer</footer>
+</body>
+</html>
